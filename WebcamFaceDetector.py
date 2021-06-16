@@ -10,7 +10,11 @@ TIME_DIFF = 1 #1ms
 GREEN = (0, 255, 0)
 
 # Get the paths for the image and the cascades you want to pass
-casc_path = sys.argv[1] # This should be an XML file
+# Said cascade must be an XML file
+if len(sys.argv) > 1:
+    casc_path = sys.argv[1]
+else:
+    casc_path = 'haarcascade_frontalface_alt.xml'
 
 # Create a HAAR cascade
 # Loads face cascade into memory => ready to use
@@ -38,7 +42,7 @@ while rval:
     faces = face_cascade.detectMultiScale(
         gray,
         scaleFactor=1.1,
-        minNeighbors=4, # Increase this for accuracy
+        minNeighbors=5, # Increase this for accuracy
         #flags=cv2.cv.CV_HAAR_SCALE_IMAGE,
         minSize=(30,30)
     )
