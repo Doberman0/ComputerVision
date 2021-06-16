@@ -14,7 +14,7 @@ GREEN = (0, 255, 0)
 if len(sys.argv) > 1:
     casc_path = sys.argv[1]
 else:
-    casc_path = 'haarcascade_frontalface_alt.xml'
+    casc_path = 'haarcascade_frontalface_default.xml'
 
 # Create a HAAR cascade
 # Loads face cascade into memory => ready to use
