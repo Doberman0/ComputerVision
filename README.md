@@ -1,2 +1,2 @@
 # ComputerVision
-Whatever computer vision shenanigans come to mind
+Whatever Computer Vision (CV) shenanigans come to mind
